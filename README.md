@@ -2,9 +2,9 @@
 
 ## Getting Started
 
-To start, download `rofigen` to your computer.
-You can run `rofigen` with
-```./rofigen ~/kawaiifaces```
+To run `rofigen` you must pass a script, like `./rofigen ~/kawaiifaces`.
+
+You can bindsym your i3, e. g., `bindsym $mod+Ctrl+l exec ~/Documents/rofigen/rofigen ~/kawaiifaces`.
 
 ### Example #1 - Kawaii Faces
 
@@ -49,3 +49,11 @@ menu_nrows=${#menu[@]}
 #### Output
 
 ![Menu-print](images/example2-1.png)
+
+## Configuring
+
+To create a new menu, your script must contain these:
+
+- `title` title displayed
+- `widthpercent` set width of menu, is specified in percentage
+- `menu` menu items: [text]="command_to_execute"
