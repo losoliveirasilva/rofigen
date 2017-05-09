@@ -21,3 +21,11 @@ menu=(
 )
 menu_nrows=${#menu[@]}
 ```
+
+#### Output
+
+![Menu](images/example1-1.png)
+
+- `title` title displayed
+- `widthpercent` set width of menu, is specified in percentage
+- `menu` menu items: `[text]="command_to_execute"`
