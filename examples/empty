@@ -1,0 +1,11 @@
+#!/bin/bash
+
+title="title"
+widthpercent=number
+
+typeset -A menu
+menu=(
+    [option 1]="command to execute 1"
+    [option 2]="command to execute 2"
+)
+menu_nrows=${#menu[@]}
