@@ -1,6 +1,8 @@
-# rofigen - Generates rofi application
+# rofigen - Generates Rofi menu
 
 ## Getting Started
+
+`rofigen` requires [Rofi](https://github.com/DaveDavenport/rofi).
 
 To run `rofigen` you must pass a script, like `./rofigen ~/kawaiifaces`.
 
