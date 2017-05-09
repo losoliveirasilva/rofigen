@@ -8,6 +8,23 @@ To run `rofigen` you must pass a script, like `./rofigen ~/kawaiifaces`.
 
 You can bindsym your i3, e. g., `bindsym $mod+Ctrl+l exec ~/Documents/rofigen/rofigen ~/kawaiifaces`.
 
+### Example #0 - Empty file
+
+```bash
+#!/bin/bash
+
+title="title"
+widthpercent=number
+
+typeset -A menu
+menu=(
+    [option 1]="command to execute 1"
+    [option 2]="command to execute 2"
+)
+menu_nrows=${#menu[@]}
+```
+
+
 ### Example #1 - Kawaii Faces
 
 ```bash
