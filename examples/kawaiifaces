@@ -1,0 +1,12 @@
+#!/bin/bash
+
+title="Kawaii faces:"
+widthpercent=10
+
+typeset -A menu
+menu=(
+  [( ͡° ͜ʖ ͡°)]="~/sh_kawaiifaces 2"
+  [¯\_(ツ)_/¯]="~/sh_kawaiifaces 1"
+  [Cancel]=""
+)
+menu_nrows=${#menu[@]}
