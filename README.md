@@ -2,8 +2,9 @@
 
 ## Getting Started
 
-To start, download `rofigen` to your computer. Next, follow along with a couple
-of examples which you can find in the repository:
+To start, download `rofigen` to your computer.
+You can run `rofigen` with
+```./rofigen ~/kawaiifaces```
 
 ### Example #1 - Kawaii Faces
 
@@ -24,8 +25,27 @@ menu_nrows=${#menu[@]}
 
 #### Output
 
-![Menu](images/example1-1.png)
+![Menu-kawaii](images/example1-1.png)
 
-- `title` title displayed
-- `widthpercent` set width of menu, is specified in percentage
-- `menu` menu items: `[text]="command_to_execute"`
+### Example #2 - Printscreen
+
+```bash
+#!/bin/bash
+
+title="Printscreen:"
+widthpercent=15
+
+typeset -A menu
+menu=(
+  [Selection | clipboard]="~/sh_printscreen 4"
+  [Selection | folder]="~/sh_printscreen 3"
+  [Fullscreen | clipboard]="~/sh_printscreen 2"
+  [Fullscreen | folder]="~/sh_printscreen 1"
+  [Cancel]=""
+)
+menu_nrows=${#menu[@]}
+```
+
+#### Output
+
+![Menu-print](images/example2-1.png)

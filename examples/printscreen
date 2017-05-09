@@ -1,0 +1,14 @@
+#!/bin/bash
+
+title="Printscreen:"
+widthpercent=15
+
+typeset -A menu
+menu=(
+  [Selection | clipboard]="~/sh_printscreen 4"
+  [Selection | folder]="~/sh_printscreen 3"
+  [Fullscreen | clipboard]="~/sh_printscreen 2"
+  [Fullscreen | folder]="~/sh_printscreen 1"
+  [Cancel]=""
+)
+menu_nrows=${#menu[@]}
