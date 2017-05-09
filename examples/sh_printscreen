@@ -1,10 +1,10 @@
 #!/bin/bash
 case "$1" in
-    1)  maim -m 1 ~/Pictures/Screenshots/$(date +"20%y-%m-%d_%H:%M:%S").png
+    1)  sleep 1 && maim -m 1 ~/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png
         ;;
-    2)  maim -m 1 --format=png /dev/stdout | xclip -selection clipboard -t image/png -i
+    2)  sleep 1 && maim -m 1 --format=png /dev/stdout | xclip -selection clipboard -t image/png -i
         ;;
-    3)  maim -m 1 --hidecursor -s ~/Pictures/Screenshots/$(date +"20%y-%m-%d_%H:%M:%S").png
+    3)  maim -m 1 --hidecursor -s ~/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png
         ;;
     4)  maim -m 1 --hidecursor --format=png -s /dev/stdout | xclip -selection clipboard -t image/png -i
 esac
