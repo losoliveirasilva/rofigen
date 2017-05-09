@@ -16,9 +16,12 @@ widthpercent=10
 
 typeset -A menu
 menu=(
-  [( ͡° ͜ʖ ͡°)]="~/sh_kawaiifaces 2"
-  [¯\_(ツ)_/¯]="~/sh_kawaiifaces 1"
-  [Cancel]=""
+    [¯\_(ツ)_/¯]="~/sh_kawaiifaces 1"
+    [( ͡° ͜ʖ ͡°)]="~/sh_kawaiifaces 2"
+    [ಠ_ಠ]="~/sh_kawaiifaces 3"
+    [◕‿◕]="~/sh_kawaiifaces 4"
+    [(╯°□°）╯︵ ┻━┻]="~/sh_kawaiifaces 5"
+    [Cancel]=""
 )
 menu_nrows=${#menu[@]}
 ```
