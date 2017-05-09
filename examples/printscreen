@@ -9,6 +9,5 @@ menu=(
   [Selection | folder]="~/sh_printscreen 3"
   [Fullscreen | clipboard]="~/sh_printscreen 2"
   [Fullscreen | folder]="~/sh_printscreen 1"
-  [Cancel]=""
 )
 menu_nrows=${#menu[@]}

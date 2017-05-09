@@ -5,11 +5,14 @@ source $1
 ROFI_TEXT=$title
 ROFI_OPTIONS=(-width $widthpercent -location 0 -hide-scrollbar -bw 2)
 
-launcher_exe="rofi"
 launcher_options=(-dmenu -i -lines "${menu_nrows}" -p "${ROFI_TEXT}" \
         "${ROFI_OPTIONS[@]}")
 
-launcher=(${launcher_exe} "${launcher_options[@]}")
+launcher=(rofi "${launcher_options[@]}")
 selection="$(printf '%s\n' "${!menu[@]}" | sort | "${launcher[@]}")"
 
-i3-msg -q "exec ${menu[${selection}]}"
+if [[ -n $selection ]]
+then
+    i3-msg -q "exec ${menu[${selection}]}"
+fi
+

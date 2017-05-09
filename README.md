@@ -12,16 +12,15 @@ You can bindsym your i3, e. g., `bindsym $mod+Ctrl+l exec ~/Documents/rofigen/ro
 #!/bin/bash
 
 title="Kawaii faces:"
-widthpercent=10
+widthpercent=13
 
 typeset -A menu
 menu=(
-    [¯\_(ツ)_/¯]="~/sh_kawaiifaces 1"
-    [( ͡° ͜ʖ ͡°)]="~/sh_kawaiifaces 2"
-    [ಠ_ಠ]="~/sh_kawaiifaces 3"
-    [◕‿◕]="~/sh_kawaiifaces 4"
-    [(╯°□°）╯︵ ┻━┻]="~/sh_kawaiifaces 5"
-    [Cancel]=""
+    [1 - ¯\_(ツ)_/¯]="~/sh_kawaiifaces 1"
+    [2 - ( ͡° ͜ʖ ͡°)]="~/sh_kawaiifaces 2"
+    [3 - ಠ_ಠ]="~/sh_kawaiifaces 3"
+    [4 - ◕‿◕]="~/sh_kawaiifaces 4"
+    [5 - (╯°□°）╯︵ ┻━┻]="~/sh_kawaiifaces 5"
 )
 menu_nrows=${#menu[@]}
 ```
@@ -44,7 +43,6 @@ menu=(
   [Selection | folder]="~/sh_printscreen 3"
   [Fullscreen | clipboard]="~/sh_printscreen 2"
   [Fullscreen | folder]="~/sh_printscreen 1"
-  [Cancel]=""
 )
 menu_nrows=${#menu[@]}
 ```
