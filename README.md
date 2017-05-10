@@ -1,8 +1,10 @@
 # rofigen - Generates Rofi menu
 
+`rofigen` is a framework to easily create personal [Rofi](https://github.com/DaveDavenport/rofi) menus for [i3wm](https://i3wm.org/).
+
 ## Getting Started
 
-`rofigen` requires [Rofi](https://github.com/DaveDavenport/rofi).
+`rofigen` requires [Rofi](https://github.com/DaveDavenport/rofi) and [i3wm](https://i3wm.org/).
 
 To run `rofigen` you must pass a script, like `./rofigen ~/kawaiifaces`.
 
@@ -75,5 +77,5 @@ menu_nrows=${#menu[@]}
 To create a new menu, your script must contain these:
 
 - `title` title displayed
-- `widthpercent` set width of menu, is specified in percentage
+- `widthpercent` set width of menu, is specified in percentage (optional)
 - `menu` menu items: [text]="command_to_execute"

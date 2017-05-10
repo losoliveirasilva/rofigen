@@ -3,7 +3,11 @@
 source $1
 
 ROFI_TEXT=$title
-ROFI_OPTIONS=(-width $widthpercent -location 0 -hide-scrollbar -bw 2)
+if [ -z ${widthpercent+x} ]; then
+    ROFI_OPTIONS=(-location 0 -hide-scrollbar -bw 2)
+else
+    ROFI_OPTIONS=(-width $widthpercent -location 0 -hide-scrollbar -bw 2)
+fi
 
 launcher_options=(-dmenu -i -lines "${menu_nrows}" -p "${ROFI_TEXT}" \
         "${ROFI_OPTIONS[@]}")
