@@ -5,9 +5,16 @@ widthpercent=15
 
 typeset -A menu
 menu=(
-  [Selection | clipboard]="~/sh_printscreen 4"
-  [Selection | folder]="~/sh_printscreen 3"
-  [Fullscreen | clipboard]="~/sh_printscreen 2"
-  [Fullscreen | folder]="~/sh_printscreen 1"
+  [4 Selection | clipboard]="~/sh_printscreen 4"
+  [3 Selection | folder]="~/sh_printscreen 3"
+  [2 Fullscreen | clipboard]="~/sh_printscreen 2"
+  [1 Fullscreen | folder]="~/sh_printscreen 1"
 )
-menu_nrows=${#menu[@]}
+
+typeset -A colors
+colors=(
+    [-color-window]="#000000, #ffffff, #ffffff"
+    [-color-normal]="#ffffff, #000000, #eee8d5, #272727, #ffffff"
+    [-color-active]="#fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3"
+    [-color-urgent]="#fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3"
+)

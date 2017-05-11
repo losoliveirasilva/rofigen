@@ -23,7 +23,11 @@ menu=(
     [option 1]="command to execute 1"
     [option 2]="command to execute 2"
 )
-menu_nrows=${#menu[@]}
+
+typeset -A colors
+colors=(
+    [color-flag]="#color"
+)
 ```
 
 
@@ -37,13 +41,20 @@ widthpercent=13
 
 typeset -A menu
 menu=(
-    [1 - ¯\_(ツ)_/¯]="~/sh_kawaiifaces 1"
-    [2 - ( ͡° ͜ʖ ͡°)]="~/sh_kawaiifaces 2"
-    [3 - ಠ_ಠ]="~/sh_kawaiifaces 3"
-    [4 - ◕‿◕]="~/sh_kawaiifaces 4"
-    [5 - (╯°□°）╯︵ ┻━┻]="~/sh_kawaiifaces 5"
+    ["1 ¯\_(ツ)_/¯"]="~/sh_kawaiifaces 1"
+    [2 ( ͡° ͜ʖ ͡°)]="~/sh_kawaiifaces 2"
+    [3 ಠ_ಠ]="~/sh_kawaiifaces 3"
+    [4 ◕‿◕]="~/sh_kawaiifaces 4"
+    [5 (╯°□°）╯︵ ┻━┻]="~/sh_kawaiifaces 5"
 )
-menu_nrows=${#menu[@]}
+
+typeset -A colors
+colors=(
+    [-color-window]="#000000, #ffffff, #ffffff"
+    [-color-normal]="#ffffff, #000000, #eee8d5, #272727, #ffffff"
+    [-color-active]="#fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3"
+    [-color-urgent]="#fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3"
+)
 ```
 
 #### Output
@@ -55,17 +66,25 @@ menu_nrows=${#menu[@]}
 ```bash
 #!/bin/bash
 
-title="Printscreen:"
-widthpercent=15
+title="Kawaii faces:"
+widthpercent=13
 
 typeset -A menu
 menu=(
-  [Selection | clipboard]="~/sh_printscreen 4"
-  [Selection | folder]="~/sh_printscreen 3"
-  [Fullscreen | clipboard]="~/sh_printscreen 2"
-  [Fullscreen | folder]="~/sh_printscreen 1"
+    ["1 ¯\_(ツ)_/¯"]="~/sh_kawaiifaces 1"
+    [2 ( ͡° ͜ʖ ͡°)]="~/sh_kawaiifaces 2"
+    [3 ಠ_ಠ]="~/sh_kawaiifaces 3"
+    [4 ◕‿◕]="~/sh_kawaiifaces 4"
+    [5 (╯°□°）╯︵ ┻━┻]="~/sh_kawaiifaces 5"
 )
-menu_nrows=${#menu[@]}
+
+typeset -A colors
+colors=(
+    [-color-window]="#0000ff, #ffffff, #ffffff"
+    [-color-normal]="#ffffff, #000000, #eee8d5, #000473, #ffffff"
+    [-color-active]="#fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3"
+    [-color-urgent]="#fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3"
+)
 ```
 
 #### Output
@@ -79,3 +98,4 @@ To create a new menu, your script must contain these:
 - `title` title displayed
 - `widthpercent` set width of menu, is specified in percentage (optional)
 - `menu` menu items: [text]="command_to_execute"
+- `colors` Rofi colors. You can use the [theme generator](https://davedavenport.github.io/rofi/p11-Generator.html) (optional)
