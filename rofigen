@@ -30,6 +30,6 @@ selection="$(printf '%s\n' "${!menu[@]}" | sort | "${launcher[@]}")"
 
 if [[ -n $selection ]]
 then
-    i3-msg -q "exec ${menu[${selection}]}"
+    exec ${menu[${selection}]}
 fi
 
