@@ -1,14 +1,14 @@
 # rofigen - Generates Rofi menu
 
-`rofigen` is a framework to easily create personal [Rofi](https://github.com/DaveDavenport/rofi) menus for [i3wm](https://i3wm.org/).
+`rofigen` is a framework to easily create personal [Rofi](https://github.com/DaveDavenport/rofi) menus.
 
 ## Getting Started
 
-`rofigen` requires [Rofi](https://github.com/DaveDavenport/rofi) and [i3wm](https://i3wm.org/).
+`rofigen` requires [Rofi](https://github.com/DaveDavenport/rofi).
 
 To run `rofigen` you must pass a script, like `./rofigen ~/kawaiifaces`.
 
-You can bindsym your i3, e. g., `bindsym $mod+Ctrl+l exec ~/Documents/rofigen/rofigen ~/kawaiifaces`.
+You can bindsym your [i3wm](https://i3wm.org/), e. g., `bindsym $mod+Ctrl+l exec rofigen ~/kawaiifaces`.
 
 ### Example #0 - Empty file
 
