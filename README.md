@@ -66,22 +66,21 @@ colors=(
 ```bash
 #!/bin/bash
 
-title="Kawaii faces:"
-widthpercent=13
+title="Printscreen:"
+widthpercent=15
 
 typeset -A menu
 menu=(
-    ["1 ¯\_(ツ)_/¯"]="~/sh_kawaiifaces 1"
-    [2 ( ͡° ͜ʖ ͡°)]="~/sh_kawaiifaces 2"
-    [3 ಠ_ಠ]="~/sh_kawaiifaces 3"
-    [4 ◕‿◕]="~/sh_kawaiifaces 4"
-    [5 (╯°□°）╯︵ ┻━┻]="~/sh_kawaiifaces 5"
+  [4 Selection | clipboard]="~/sh_printscreen 4"
+  [3 Selection | folder]="~/sh_printscreen 3"
+  [2 Fullscreen | clipboard]="~/sh_printscreen 2"
+  [1 Fullscreen | folder]="~/sh_printscreen 1"
 )
 
 typeset -A colors
 colors=(
-    [-color-window]="#0000ff, #ffffff, #ffffff"
-    [-color-normal]="#ffffff, #000000, #eee8d5, #000473, #ffffff"
+    [-color-window]="#000000, #ffffff, #ffffff"
+    [-color-normal]="#ffffff, #000000, #eee8d5, #272727, #ffffff"
     [-color-active]="#fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3"
     [-color-urgent]="#fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3"
 )
