@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $1
+"source $1"
 
 # Window title
 ROFI_TEXT=$title
